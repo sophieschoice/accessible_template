@@ -1,7 +1,6 @@
 /*! normalize.css | MIT License | github.com/necolas/normalize.css */
 
 html {
-  font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   line-height: 1.15;
@@ -540,14 +539,6 @@ iframe:focus,
 
 .headerblock {
   background-color: #fedb8b;
-}
-
-.intro p {
-  font-family:Merriweather Web, Georgia, Cambria, Times New Roman, Times, serif;
-  font-size:1.34rem;
-  line-height:1.8;
-  font-weight:500;
-  max-width:88ex;
 }
 
 .menu {
@@ -1376,17 +1367,6 @@ html.usa-js-loading .usa-nav__submenu{
   }
 }
 
-[type=search]{
-  -webkit-appearance:textfield;
-  outline-offset:-2px;
-}
-[type=search]::-webkit-search-decoration{
-  -webkit-appearance:none;
-}
-::-webkit-file-upload-button{
-  -webkit-appearance:button;
-  font:inherit;
-}
 
 input[type=search]{
   box-sizing:border-box;
@@ -1462,12 +1442,63 @@ input[type=search]{
   outline-offset:0.25rem;
 }
 
+.usa-button:disabled{
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-font-smoothing:antialiased;
+  background-color:#c9c9c9;
+  color:white;
+  pointer-events:none;
+}
+.usa-button:disabled:hover, .usa-button:disabled.usa-button--hover, .usa-button:disabled:active, .usa-button:disabled.usa-button--active, .usa-button:disabled:focus, .usa-button:disabled.usa-focus{
+  background-color:#c9c9c9;
+  border:0;
+  box-shadow:none;
+}
+
 input:not([disabled]):focus,
 select:not([disabled]):focus,
 textarea:not([disabled]):focus,
 button:not([disabled]):focus{
   outline:0.25rem solid #2491ff;
   outline-offset:0;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea{
+  font-family:inherit;
+  font-size:100%;
+  line-height:1.15;
+  margin:0;
+}
+button,
+input{
+  overflow:visible;
+}
+button,
+select{
+  text-transform:none;
+}
+button,
+[type=button],
+[type=reset],
+[type=submit]{
+  -webkit-appearance:button;
+}
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner{
+  border-style:none;
+  padding:0;
+}
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring{
+  outline:1px dotted ButtonText;
 }
 
 .usa-input {
@@ -1480,8 +1511,6 @@ button:not([disabled]):focus{
   border-radius:0;
   color:#1b1b1b;
   display:block;
-  height:2.5rem;
-  margin-top:0.5rem;
   max-width:30rem;
   padding:0.5rem;
   width:100%;
@@ -1645,6 +1674,7 @@ a:visited{color:#54278f;}
 a:hover{color:#1a4480;}
 a:active{color:#162e51;}
 a:focus{outline:0.25rem solid #2491ff;outline-offset:0;}
+figcaption {text-align: center; font-size: 0.90rem;padding-top: 0.8rem;}
 .external::after{
   background-image:url("../img/usa-icons-bg/launch--blue-60v.svg");
   background-position:50% 60%;
@@ -1681,6 +1711,56 @@ a:focus{outline:0.25rem solid #2491ff;outline-offset:0;}
 
 ol[class], ul[class] {
     list-style: none;
+}
+
+.intro p {
+  font-family:Merriweather Web, Georgia, Cambria, Times New Roman, Times, serif;
+  font-size:1.34rem;
+  line-height:1.8;
+  font-weight:500;
+}
+
+.icon{
+  display:inline-block;
+  fill:currentColor;
+  height:1em;
+  position:relative;
+  width:1em;
+}
+
+.icon-size-3{
+  height:1.5rem;
+  width:1.5rem;
+}
+
+.icon-size-4{
+  height:2rem;
+  width:2rem;
+}
+
+.icon-size-5{
+  height:2.5rem;
+  width:2.5rem;
+}
+
+.icon-size-6{
+  height:3rem;
+  width:3rem;
+}
+
+.icon-size-7{
+  height:3.5rem;
+  width:3.5rem;
+}
+
+.icon-size-8{
+  height:4rem;
+  width:4rem;
+}
+
+.icon-size-9{
+  height:4.5rem;
+  width:4.5rem;
 }
 
 /* POSITIONING */
